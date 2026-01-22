@@ -1,14 +1,14 @@
 {
   "name": "create-jakestack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI to scaffold a modern full-stack application with Bun, Elysia, React, and PostgreSQL",
   "type": "module",
   "bin": {
     "create-jakestack": "./dist/index.js"
   },
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist --target node",
-    "dev": "bun run src/index.ts"
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js --banner:js='#!/usr/bin/env node'",
+    "dev": "npx tsx src/index.ts"
   },
   "files": [
     "dist",
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@types/bun": "^1.1.6",
-    "@types/prompts": "^2.4.9"
+    "@types/prompts": "^2.4.9",
+    "esbuild": "^0.27.2"
   }
 }
