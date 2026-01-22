@@ -1,6 +1,6 @@
 {
   "name": "create-jakestack",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI to scaffold a modern full-stack application with Bun, Elysia, React, and PostgreSQL",
   "bin": {
     "create-jakestack": "./dist/index.js"

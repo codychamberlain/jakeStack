@@ -2,12 +2,8 @@ import { program } from "commander";
 import prompts from "prompts";
 import chalk from "chalk";
 import { existsSync, mkdirSync, cpSync, readFileSync, writeFileSync, readdirSync, statSync } from "fs";
-import { join, dirname, resolve } from "path";
-import { fileURLToPath } from "url";
+import { join, resolve } from "path";
 import { execSync } from "child_process";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 const TEMPLATE_DIR = join(__dirname, "..", "template");
 
